@@ -1,0 +1,7 @@
+.productToShop{
+    display: flex;
+}
+.empty{
+    width: 1vw;
+    height: 1vh;
+}
