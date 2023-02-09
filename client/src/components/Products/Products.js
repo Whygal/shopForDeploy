@@ -3,6 +3,7 @@ import React, {useContext} from "react";
 import Product from "../Product/Product";
 import { MyContext } from "../../MyContext";
 
+
 const Products = () => {
 const dataFromContext= useContext(MyContext)
 
@@ -14,7 +15,9 @@ return(
       title={p.title}
        price={p.price}
        image={p.image}
-       />)}
+       des={p.description}
+       />
+       )}
     </section>
     )
 }

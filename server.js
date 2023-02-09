@@ -11,6 +11,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('client/build'))
 mongoose.set('strictQuery', true)
 // app.get('/api/getAllTodo', async(req,res) => {
 //     //db function for getting the todos
@@ -181,6 +182,9 @@ try {
         }
     })
 
+    app.get('*', (res, req) => {
+        res.sendFile(__dirname+'client/build/index.html')
+    })
 // mongoose.connect("mongodb://127.0.0.1:27017/todosApp", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
