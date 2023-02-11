@@ -25,7 +25,7 @@ const Header = () =>{
     </IconButton>
     </Link>
     <Typography variant="h2">
-      Jackets
+      yaniv's shop
     </Typography>
     <Button variant="outlined" onClick={()=> navigate("about")}>
       about
