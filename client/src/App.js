@@ -22,8 +22,8 @@ const App = () => {
 
   const getProducts = async function () {
     try {
-      const response = await fetch("https://data.mongodb-api.com/app/data-nfwbt/endpoint/data/v1/action/getAllTodos");
-      // const response = await fetch("https://fakestoreapi.com/products");
+      // const response = await fetch("https://data.mongodb-api.com/app/data-nfwbt/endpoint/data/v1/action/getAllTodos");
+      const response = await fetch("https://fakestoreapi.com/products");
       const answer = await response.json();
       console.log(response)
       setProductsInCat(answer);
