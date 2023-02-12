@@ -6,7 +6,6 @@ import { Typography, CardMedia, Card } from '@mui/material';
 export const SingleProductReview = () => {
     const location = useLocation()
     const object = location.state.p
-    console.log(object)
     const param = useParams()
     return(
         <Card>
@@ -17,7 +16,7 @@ export const SingleProductReview = () => {
              product number: {param.productId}
         </Typography>
         <CardMedia
-        sx={[{maxWidth: 300}, {maxHeight:320}]}
+        sx={[{width: 300}, {height:320}]}
         component="img"
         src={object.image}
         alt=""

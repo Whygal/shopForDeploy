@@ -12,7 +12,6 @@ const Header = () =>{
   const dataFromContext = useContext(MyContext)
   const navigate = useNavigate()
   const productsToManege = dataFromContext.products
-  console.log(productsToManege)
     return(
       <React.Fragment>
         <div className="Header">

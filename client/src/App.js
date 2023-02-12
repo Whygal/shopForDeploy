@@ -22,10 +22,11 @@ const App = () => {
 
   const getProducts = async function () {
     try {
-      // const response = await fetch("https://data.mongodb-api.com/app/data-nfwbt/endpoint/data/v1/action/getAllTodos");
+      
+      // const response = await fetch("http://localhost:8000/api/getAllTodos");
       const response = await fetch("https://fakestoreapi.com/products");
       const answer = await response.json();
-      console.log(response)
+      
       setProductsInCat(answer);
       setProducts(answer);
     } catch (error) {
@@ -39,6 +40,7 @@ const App = () => {
   
   useEffect ( ()=>{
     onCatFilterChange();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[category, filterByPrice])
 
   const onCatFilterChange = () =>{
